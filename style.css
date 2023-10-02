@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-content {
+  font: 500 18px / 26px 'Raleway', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  transition: 1s all easy;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader, .preloader:before, .preloader:after{
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+.preloader{
+  height: 110px;
+  width: 110px;
+  position: relative;
+  border-top-color: gold;
+  animation-name: spin;
+   animation-duration:1.1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.preloader:before, .preloader:after{
+  content: "";
+  position: absolute;
+}
+
+.preloader:before{
+  top: 10px;
+  left:10px;
+  bottom: 10px;
+  right: 10px;
+  border-top-color: red;
+  animation-name: spin;
+   animation-duration:2.1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-duration: 2.1s;
+}
+
+.preloader:after{
+  top: 23px;
+  left:23px;
+  bottom: 23px;
+  right: 23px;
+  border-top-color: indigo;
+  animation-name: spin;
+  animation-delay: 1.3s;
+  animation-duration:3.1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
